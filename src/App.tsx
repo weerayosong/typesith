@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { forceUsers } from "./data/mockData";
 import { filterEntities, sortEntities, paginate } from "./utils/dataProcessor";
-import type { EraType, ForceSide, SortOption } from "./types";
+import type { EraType, ForceSide, SortOption, ForceEntity } from "./types";
 
 // components
 import EntityCard from "./components/EntityCard";
 import FilterControls from "./components/FilterControls";
 import Pagination from "./components/Pagination";
+import EntityModal from "./components/EntityModal";
 
 function App() {
     // state
@@ -15,6 +16,9 @@ function App() {
     const [eraFilter, setEraFilter] = useState<EraType>("All");
     const [sortBy, setSortBy] = useState<SortOption>("mCountDesc");
     const [currentPage, setCurrentPage] = useState<number>(1);
+    const [selectedEntity, setSelectedEntity] = useState<ForceEntity | null>(
+        null,
+    );
 
     // derived state (คำนวณสด)
     const filteredData = filterEntities(
@@ -71,7 +75,11 @@ function App() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                             {/* EntityCard */}
                             {finalData.map((entity) => (
-                                <EntityCard key={entity.id} entity={entity} />
+                                <EntityCard
+                                    key={entity.id}
+                                    entity={entity}
+                                    onClick={() => setSelectedEntity(entity)}
+                                />
                             ))}
                         </div>
                     )}
@@ -84,6 +92,11 @@ function App() {
                     onPageChange={setCurrentPage}
                 />
             </div>
+            {/* modal นอกสุด ทับทุกอย่างเมื่อ selectedEntity !null */}
+            <EntityModal
+                entity={selectedEntity}
+                onClose={() => setSelectedEntity(null)}
+            />
         </div>
     );
 }

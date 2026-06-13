@@ -99,10 +99,10 @@ export default function FilterControls({
                     }}
                 >
                     <option value="mCountDesc">
-                        Midichlorians-Count (High-Low)
+                        Midichlorian-Count (High-Low)
                     </option>
                     <option value="mCountAsc">
-                        Midichlorians-Count (Low-High)
+                        Midichlorian-Count (Low-High)
                     </option>
                     <option value="nameAsc">Name (A-Z)</option>
                 </select>
