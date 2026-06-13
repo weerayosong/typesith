@@ -1,6 +1,6 @@
 # [WIP] TypeSith: Ultimate Galactic Codex
 
-## [Project #7]
+## https://typesith.vercel.app
 
 My TypeScript Training ground.
 
