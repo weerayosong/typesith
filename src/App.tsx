@@ -2,6 +2,7 @@ import { useState } from "react";
 import { forceUsers } from "./data/mockData";
 import { filterEntities, sortEntities, paginate } from "./utils/dataProcessor";
 import type { EraType, ForceSide, SortOption } from "./types";
+import EntityCard from "./components/EntityCard";
 
 function App() {
     // state
@@ -139,43 +140,9 @@ function App() {
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                            {/* EntityCard */}
                             {finalData.map((entity) => (
-                                <div
-                                    key={entity.id}
-                                    className="border border-slate-200 p-4 rounded-md relative overflow-hidden group hover:border-slate-400 transition-colors"
-                                >
-                                    {/* แถบสีด้านข้างแบ่งฝั่ง */}
-                                    <div
-                                        className={`absolute top-0 left-0 bottom-0 w-1 ${entity.side === "Sith" ? "bg-red-600" : "bg-slate-400"}`}
-                                    ></div>
-
-                                    <div className="pl-3">
-                                        <div className="flex justify-between items-start">
-                                            <h3 className="font-bold text-slate-800 line-clamp-1">
-                                                {entity.side === "Sith"
-                                                    ? entity.darthTitle
-                                                    : entity.name}
-                                            </h3>
-                                            <span
-                                                className={`text-[10px] font-bold px-2 py-1 rounded uppercase ${entity.side === "Sith" ? "bg-red-50 text-red-700 border border-red-200" : "bg-slate-100 text-slate-600 border border-slate-200"}`}
-                                            >
-                                                {entity.side}
-                                            </span>
-                                        </div>
-                                        <p className="text-xs text-slate-500 mt-1">
-                                            {entity.era}
-                                        </p>
-
-                                        <div className="mt-3 pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
-                                            <span className="text-slate-500">
-                                                M-Count
-                                            </span>
-                                            <span className="font-semibold text-slate-700">
-                                                {entity.midichlorian.toLocaleString()}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <EntityCard key={entity.id} entity={entity} />
                             ))}
                         </div>
                     )}
