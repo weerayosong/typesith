@@ -2,7 +2,11 @@ import { useState } from "react";
 import { forceUsers } from "./data/mockData";
 import { filterEntities, sortEntities, paginate } from "./utils/dataProcessor";
 import type { EraType, ForceSide, SortOption } from "./types";
+
+// components
 import EntityCard from "./components/EntityCard";
+import FilterControls from "./components/FilterControls";
+import Pagination from "./components/Pagination";
 
 function App() {
     // state
@@ -21,12 +25,8 @@ function App() {
     );
     const sortedData = sortEntities(filteredData, sortBy);
     const finalData = paginate(sortedData, currentPage, 12);
-
     // คำนวณจำนวนหน้าทั้งหมด
     const totalPages = Math.ceil(filteredData.length / 12) || 1;
-
-    // helper fx เวลาพิมพ์ค้นหา/เปลี่ยนฟิลเตอร์ ต้องเด้งกลับหน้า 1 เสมอ
-    const handleFilterChange = () => setCurrentPage(1);
 
     return (
         <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-sans text-slate-800">
@@ -48,89 +48,18 @@ function App() {
                     </div>
                 </header>
 
-                {/* === CONTROLS === */}
-                <div className="bg-white p-4 rounded-md border border-slate-200 shadow-sm flex flex-wrap gap-4">
-                    <div className="flex-1 min-w-50">
-                        <label className="block text-xs font-bold text-slate-400 uppercase mb-1">
-                            Search
-                        </label>
-                        <input
-                            type="text"
-                            placeholder="Search name or title..."
-                            className="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-slate-500 focus:ring-1 focus:ring-slate-500"
-                            value={searchTerm}
-                            onChange={(e) => {
-                                setSearchTerm(e.target.value);
-                                handleFilterChange();
-                            }}
-                        />
-                    </div>
-
-                    <div className="w-full md:w-auto">
-                        <label className="block text-xs font-bold text-slate-400 uppercase mb-1">
-                            Affiliation
-                        </label>
-                        <select
-                            className="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-slate-500"
-                            value={sideFilter}
-                            onChange={(e) => {
-                                setSideFilter(
-                                    e.target.value as "All" | ForceSide,
-                                );
-                                handleFilterChange();
-                            }}
-                        >
-                            <option value="All">All Sides</option>
-                            <option value="Jedi">Jedi Order</option>
-                            <option value="Sith">Sith Order</option>
-                        </select>
-                    </div>
-
-                    <div className="w-full md:w-auto">
-                        <label className="block text-xs font-bold text-slate-400 uppercase mb-1">
-                            Era
-                        </label>
-                        <select
-                            className="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-slate-500"
-                            value={eraFilter}
-                            onChange={(e) => {
-                                setEraFilter(e.target.value as EraType);
-                                handleFilterChange();
-                            }}
-                        >
-                            <option value="All">All Eras</option>
-                            <option value="Old Republic">Old Republic</option>
-                            <option value="High Republic">High Republic</option>
-                            <option value="Prequel">
-                                Prequel / Clone Wars
-                            </option>
-                            <option value="Original">Original / Empire</option>
-                            <option value="Sequel">Sequel / First Order</option>
-                        </select>
-                    </div>
-
-                    <div className="w-full md:w-auto">
-                        <label className="block text-xs font-bold text-slate-400 uppercase mb-1">
-                            Sort By
-                        </label>
-                        <select
-                            className="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-slate-500"
-                            value={sortBy}
-                            onChange={(e) => {
-                                setSortBy(e.target.value as SortOption);
-                                handleFilterChange();
-                            }}
-                        >
-                            <option value="mCountDesc">
-                                M-Count (High-Low)
-                            </option>
-                            <option value="mCountAsc">
-                                M-Count (Low-High)
-                            </option>
-                            <option value="nameAsc">Name (A-Z)</option>
-                        </select>
-                    </div>
-                </div>
+                {/* === CONTROLS === (ส่ง State และ SetState เป็น Props ลงไปให้ลูก) */}
+                <FilterControls
+                    searchTerm={searchTerm}
+                    setSearchTerm={setSearchTerm}
+                    sideFilter={sideFilter}
+                    setSideFilter={setSideFilter}
+                    eraFilter={eraFilter}
+                    setEraFilter={setEraFilter}
+                    sortBy={sortBy}
+                    setSortBy={setSortBy}
+                    onFilterChange={() => setCurrentPage(1)} // เปลี่ยนฟิลเตอร์ให้เด้งกลับหน้า 1
+                />
 
                 {/* === DISPLAY GRID === */}
                 <div className="bg-white p-6 rounded-md border border-slate-200 shadow-sm min-h-100">
@@ -148,32 +77,12 @@ function App() {
                     )}
                 </div>
 
-                {/* === PAGINATION === */}
-                {totalPages > 1 && (
-                    <div className="flex justify-center items-center gap-4 pt-4">
-                        <button
-                            disabled={currentPage === 1}
-                            onClick={() => setCurrentPage((prev) => prev - 1)}
-                            className="px-4 py-2 bg-white border border-slate-300 rounded text-sm font-semibold hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition"
-                        >
-                            Prev
-                        </button>
-                        <span className="text-sm font-medium text-slate-500">
-                            Page{" "}
-                            <span className="text-slate-800 font-bold">
-                                {currentPage}
-                            </span>{" "}
-                            of {totalPages}
-                        </span>
-                        <button
-                            disabled={currentPage === totalPages}
-                            onClick={() => setCurrentPage((prev) => prev + 1)}
-                            className="px-4 py-2 bg-white border border-slate-300 rounded text-sm font-semibold hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition"
-                        >
-                            Next
-                        </button>
-                    </div>
-                )}
+                {/* === PAGINATION === (ส่ง state) */}
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={setCurrentPage}
+                />
             </div>
         </div>
     );
