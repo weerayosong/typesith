@@ -14,6 +14,7 @@ export interface BaseEntity {
     era: EraType;
     combatStyle: string;
     midichlorian: number;
+    imageUrl?: string;
 }
 
 export interface JediEntity extends BaseEntity {

@@ -28,9 +28,9 @@ function App() {
         eraFilter,
     );
     const sortedData = sortEntities(filteredData, sortBy);
-    const finalData = paginate(sortedData, currentPage, 12);
+    const finalData = paginate(sortedData, currentPage, 8);
     // คำนวณจำนวนหน้าทั้งหมด
-    const totalPages = Math.ceil(filteredData.length / 12) || 1;
+    const totalPages = Math.ceil(filteredData.length / 8) || 1;
 
     return (
         <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-sans text-slate-800">
@@ -53,6 +53,7 @@ function App() {
                 </header>
 
                 {/* === CONTROLS === (ส่ง State และ SetState เป็น Props ลงไปให้ลูก) */}
+
                 <FilterControls
                     searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
@@ -66,7 +67,7 @@ function App() {
                 />
 
                 {/* === DISPLAY GRID === */}
-                <div className="bg-white p-6 rounded-md border border-slate-200 shadow-sm min-h-100">
+                <div className="bg-white p-4 md:p-5 rounded-md border border-slate-200 shadow-sm flex flex-col flex-1 ">
                     {finalData.length === 0 ? (
                         <div className="text-center text-slate-400 py-20 border-2 border-dashed border-slate-200 rounded">
                             No records found matching your criteria.
@@ -86,6 +87,7 @@ function App() {
                 </div>
 
                 {/* === PAGINATION === (ส่ง state) */}
+
                 <Pagination
                     currentPage={currentPage}
                     totalPages={totalPages}

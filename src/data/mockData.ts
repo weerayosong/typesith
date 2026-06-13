@@ -4,6 +4,7 @@ export const forceUsers: ForceEntity[] = [
     // --- JEDI ORDER ---
     {
         id: "j1",
+        imageUrl: "/img/j1.jpg",
         side: "Jedi",
         name: "Yoda",
         era: "Prequel",
@@ -14,6 +15,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j2",
+        imageUrl: "/img/j2.jpg",
         side: "Jedi",
         name: "Luke Skywalker",
         era: "Original",
@@ -24,6 +26,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j3",
+        imageUrl: "/img/j3.jpg",
         side: "Jedi",
         name: "Obi-Wan Kenobi",
         era: "Prequel",
@@ -34,6 +37,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j4",
+        imageUrl: "/img/j4.jpg",
         side: "Jedi",
         name: "Mace Windu",
         era: "Prequel",
@@ -44,6 +48,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j5",
+        imageUrl: "/img/j5.jpg",
         side: "Jedi",
         name: "Qui-Gon Jinn",
         era: "Prequel",
@@ -54,6 +59,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j6",
+        imageUrl: "/img/j6.jpg",
         side: "Jedi",
         name: "Ahsoka Tano",
         era: "Prequel",
@@ -64,6 +70,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j7",
+        imageUrl: "/img/j7.jpg",
         side: "Jedi",
         name: "Rey Skywalker",
         era: "Sequel",
@@ -74,6 +81,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j8",
+        imageUrl: "/img/j8.jpg",
         side: "Jedi",
         name: "Cal Kestis",
         era: "Original",
@@ -84,6 +92,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j9",
+        imageUrl: "/img/j9.jpg",
         side: "Jedi",
         name: "Kanan Jarrus",
         era: "Original",
@@ -94,6 +103,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j10",
+        imageUrl: "/img/j10.jpg",
         side: "Jedi",
         name: "Ezra Bridger",
         era: "Original",
@@ -104,6 +114,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j11",
+        imageUrl: "/img/j11.jpg",
         side: "Jedi",
         name: "Plo Koon",
         era: "Prequel",
@@ -114,6 +125,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j12",
+        imageUrl: "/img/j12.jpg",
         side: "Jedi",
         name: "Kit Fisto",
         era: "Prequel",
@@ -124,6 +136,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j13",
+        imageUrl: "/img/j13.jpg",
         side: "Jedi",
         name: "Ki-Adi-Mundi",
         era: "Prequel",
@@ -134,6 +147,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j14",
+        imageUrl: "/img/j14.jpg",
         side: "Jedi",
         name: "Shaak Ti",
         era: "Prequel",
@@ -144,6 +158,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j15",
+        imageUrl: "/img/j15.jpg",
         side: "Jedi",
         name: "Luminara Unduli",
         era: "Prequel",
@@ -154,6 +169,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j16",
+        imageUrl: "/img/j16.jpg",
         side: "Jedi",
         name: "Aayla Secura",
         era: "Prequel",
@@ -164,6 +180,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j17",
+        imageUrl: "/img/j17.jpg",
         side: "Jedi",
         name: "Quinlan Vos",
         era: "Prequel",
@@ -174,6 +191,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j18",
+        imageUrl: "/img/j18.jpg",
         side: "Jedi",
         name: "Sifo-Dyas",
         era: "Prequel",
@@ -184,6 +202,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j19",
+        imageUrl: "/img/j19.jpg",
         side: "Jedi",
         name: "Yaddle",
         era: "Prequel",
@@ -194,6 +213,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j20",
+        imageUrl: "/img/j20.jpg",
         side: "Jedi",
         name: "Depa Billaba",
         era: "Prequel",
@@ -204,6 +224,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j21",
+        imageUrl: "/img/j21.jpg",
         side: "Jedi",
         name: "Adi Gallia",
         era: "Prequel",
@@ -214,6 +235,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j22",
+        imageUrl: "/img/j22.jpg",
         side: "Jedi",
         name: "Satele Shan",
         era: "Old Republic",
@@ -224,6 +246,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j23",
+        imageUrl: "/img/j23.jpg",
         side: "Jedi",
         name: "Bastila Shan",
         era: "Old Republic",
@@ -234,6 +257,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j24",
+        imageUrl: "/img/j24.jpg",
         side: "Jedi",
         name: "Revan (Redeemed)",
         era: "Old Republic",
@@ -244,6 +268,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j25",
+        imageUrl: "/img/j25.jpg",
         side: "Jedi",
         name: "Grogu",
         era: "Original",
@@ -254,6 +279,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j26",
+        imageUrl: "/img/j26.jpg",
         side: "Jedi",
         name: "Kelleran Beq",
         era: "Prequel",
@@ -264,6 +290,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j27",
+        imageUrl: "/img/j27.jpg",
         side: "Jedi",
         name: "Jocasta Nu",
         era: "Prequel",
@@ -274,6 +301,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j28",
+        imageUrl: "/img/j28.jpg",
         side: "Jedi",
         name: "Tera Sinube",
         era: "Prequel",
@@ -284,6 +312,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j29",
+        imageUrl: "/img/j29.jpg",
         side: "Jedi",
         name: "Even Piell",
         era: "Prequel",
@@ -294,6 +323,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j30",
+        imageUrl: "/img/j30.jpg",
         side: "Jedi",
         name: "Oppo Rancisis",
         era: "Prequel",
@@ -304,6 +334,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j31",
+        imageUrl: "/img/j31.jpg",
         side: "Jedi",
         name: "Yarael Poof",
         era: "Prequel",
@@ -314,6 +345,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j32",
+        imageUrl: "/img/j32.jpg",
         side: "Jedi",
         name: "Eeth Koth",
         era: "Prequel",
@@ -324,6 +356,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j33",
+        imageUrl: "/img/j33.jpg",
         side: "Jedi",
         name: "Agen Kolar",
         era: "Prequel",
@@ -334,6 +367,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j34",
+        imageUrl: "/img/j34.jpg",
         side: "Jedi",
         name: "Saesee Tiin",
         era: "Prequel",
@@ -344,6 +378,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j35",
+        imageUrl: "/img/j35.jpg",
         side: "Jedi",
         name: "Stass Allie",
         era: "Prequel",
@@ -354,6 +389,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j36",
+        imageUrl: "/img/j36.jpg",
         side: "Jedi",
         name: "Cin Drallig",
         era: "Prequel",
@@ -364,6 +400,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j37",
+        imageUrl: "/img/j37.jpg",
         side: "Jedi",
         name: "Tarre Vizsla",
         era: "Old Republic",
@@ -374,6 +411,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j38",
+        imageUrl: "/img/j38.jpg",
         side: "Jedi",
         name: "Jaro Tapal",
         era: "Prequel",
@@ -384,6 +422,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j39",
+        imageUrl: "/img/j39.jpg",
         side: "Jedi",
         name: "Ben Solo (Redeemed)",
         era: "Sequel",
@@ -394,6 +433,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j40",
+        imageUrl: "/img/j40.jpg",
         side: "Jedi",
         name: "Avar Kriss",
         era: "High Republic",
@@ -404,6 +444,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j41",
+        imageUrl: "/img/j41.jpg",
         side: "Jedi",
         name: "Elzar Mann",
         era: "High Republic",
@@ -414,6 +455,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j42",
+        imageUrl: "/img/j42.jpg",
         side: "Jedi",
         name: "Stellan Gios",
         era: "High Republic",
@@ -424,6 +466,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j43",
+        imageUrl: "/img/j43.jpg",
         side: "Jedi",
         name: "Bell Zettifar",
         era: "High Republic",
@@ -434,6 +477,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j44",
+        imageUrl: "/img/j44.jpg",
         side: "Jedi",
         name: "Burryaga Agaburry",
         era: "High Republic",
@@ -444,6 +488,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j45",
+        imageUrl: "/img/j45.jpg",
         side: "Jedi",
         name: "Cere Junda",
         era: "Original",
@@ -454,6 +499,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j46",
+        imageUrl: "/img/j46.jpg",
         side: "Jedi",
         name: "Eno Cordova",
         era: "Prequel",
@@ -464,6 +510,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j47",
+        imageUrl: "/img/j47.jpg",
         side: "Jedi",
         name: "Kyle Katarn",
         era: "Original",
@@ -474,6 +521,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j48",
+        imageUrl: "/img/j48.jpg",
         side: "Jedi",
         name: "Corran Horn",
         era: "Original",
@@ -484,6 +532,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j49",
+        imageUrl: "/img/j49.jpg",
         side: "Jedi",
         name: "Meetra Surik",
         era: "Old Republic",
@@ -494,6 +543,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j50",
+        imageUrl: "/img/j50.jpg",
         side: "Jedi",
         name: "Jolee Bindo",
         era: "Old Republic",
@@ -504,6 +554,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j51",
+        imageUrl: "/img/j51.jpg",
         side: "Jedi",
         name: "Nomi Sunrider",
         era: "Old Republic",
@@ -514,6 +565,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j52",
+        imageUrl: "/img/j52.jpg",
         side: "Jedi",
         name: "Ulic Qel-Droma",
         era: "Old Republic",
@@ -524,6 +576,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j53",
+        imageUrl: "/img/j53.jpg",
         side: "Jedi",
         name: "Rahm Kota",
         era: "Original",
@@ -534,6 +587,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j54",
+        imageUrl: "/img/j54.jpg",
         side: "Jedi",
         name: "K'Kruhk",
         era: "Original",
@@ -544,6 +598,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j55",
+        imageUrl: "/img/j55.jpg",
         side: "Jedi",
         name: "Tionne Solusar",
         era: "Original",
@@ -554,6 +609,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "j56",
+        imageUrl: "/img/j56.jpg",
         side: "Jedi",
         name: "Kam Solusar",
         era: "Original",
@@ -566,6 +622,7 @@ export const forceUsers: ForceEntity[] = [
     // --- SITH / DARK SIDE ---
     {
         id: "s1",
+        imageUrl: "/img/s1.jpg",
         side: "Sith",
         name: "Anakin Skywalker",
         era: "Original",
@@ -577,6 +634,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s2",
+        imageUrl: "/img/s2.jpg",
         side: "Sith",
         name: "Sheev Palpatine",
         era: "Original",
@@ -588,6 +646,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s3",
+        imageUrl: "/img/s3.jpg",
         side: "Sith",
         name: "Darth Maul",
         era: "Prequel",
@@ -599,6 +658,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s4",
+        imageUrl: "/img/s4.jpg",
         side: "Sith",
         name: "Count Dooku",
         era: "Prequel",
@@ -610,6 +670,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s5",
+        imageUrl: "/img/s5.jpg",
         side: "Sith",
         name: "Ben Solo",
         era: "Sequel",
@@ -621,6 +682,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s6",
+        imageUrl: "/img/s6.jpg",
         side: "Sith",
         name: "Revan (Dark)",
         era: "Old Republic",
@@ -632,6 +694,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s7",
+        imageUrl: "/img/s7.jpg",
         side: "Sith",
         name: "Darth Nihilus",
         era: "Old Republic",
@@ -643,6 +706,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s8",
+        imageUrl: "/img/s8.jpg",
         side: "Sith",
         name: "Asajj Ventress",
         era: "Prequel",
@@ -654,6 +718,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s9",
+        imageUrl: "/img/s9.jpg",
         side: "Sith",
         name: "Savage Opress",
         era: "Prequel",
@@ -665,6 +730,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s10",
+        imageUrl: "/img/s10.jpg",
         side: "Sith",
         name: "Darth Bane",
         era: "Old Republic",
@@ -676,6 +742,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s11",
+        imageUrl: "/img/s11.jpg",
         side: "Sith",
         name: "Darth Malak",
         era: "Old Republic",
@@ -687,6 +754,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s12",
+        imageUrl: "/img/s12.jpg",
         side: "Sith",
         name: "Darth Sion",
         era: "Old Republic",
@@ -698,6 +766,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s13",
+        imageUrl: "/img/s13.jpg",
         side: "Sith",
         name: "Darth Traya",
         era: "Old Republic",
@@ -709,6 +778,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s14",
+        imageUrl: "/img/s14.jpg",
         side: "Sith",
         name: "Darth Malgus",
         era: "Old Republic",
@@ -720,6 +790,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s15",
+        imageUrl: "/img/s15.jpg",
         side: "Sith",
         name: "Darth Plagueis",
         era: "Prequel",
@@ -731,6 +802,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s16",
+        imageUrl: "/img/s16.jpg",
         side: "Sith",
         name: "Darth Tenebrous",
         era: "Prequel",
@@ -742,6 +814,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s17",
+        imageUrl: "/img/s17.jpg",
         side: "Sith",
         name: "Galen Marek",
         era: "Original",
@@ -753,6 +826,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s18",
+        imageUrl: "/img/s18.jpg",
         side: "Sith",
         name: "Darth Talon",
         era: "Sequel",
@@ -764,6 +838,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s19",
+        imageUrl: "/img/s19.jpg",
         side: "Sith",
         name: "Darth Krayt",
         era: "Sequel",
@@ -775,6 +850,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s20",
+        imageUrl: "/img/s20.jpg",
         side: "Sith",
         name: "Exar Kun",
         era: "Old Republic",
@@ -786,6 +862,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s21",
+        imageUrl: "/img/s21.jpg",
         side: "Sith",
         name: "Darth Zannah",
         era: "Old Republic",
@@ -797,6 +874,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s22",
+        imageUrl: "/img/s22.jpg",
         side: "Sith",
         name: "Vitiate",
         era: "Old Republic",
@@ -808,6 +886,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s23",
+        imageUrl: "/img/s23.jpg",
         side: "Sith",
         name: "Darth Cognus",
         era: "Old Republic",
@@ -819,6 +898,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s24",
+        imageUrl: "/img/s24.jpg",
         side: "Sith",
         name: "Snoke",
         era: "Sequel",
@@ -830,6 +910,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s25",
+        imageUrl: "/img/s25.jpg",
         side: "Sith",
         name: "Grand Inquisitor",
         era: "Original",
@@ -841,6 +922,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s26",
+        imageUrl: "/img/s26.jpg",
         side: "Sith",
         name: "Trilla Suduri",
         era: "Original",
@@ -852,6 +934,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s27",
+        imageUrl: "/img/s27.jpg",
         side: "Sith",
         name: "Masana Tide",
         era: "Original",
@@ -863,6 +946,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s28",
+        imageUrl: "/img/s28.jpg",
         side: "Sith",
         name: "Fifth Brother",
         era: "Original",
@@ -874,6 +958,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s29",
+        imageUrl: "/img/s29.jpg",
         side: "Sith",
         name: "Seventh Sister",
         era: "Original",
@@ -885,6 +970,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s30",
+        imageUrl: "/img/s30.jpg",
         side: "Sith",
         name: "Eighth Brother",
         era: "Original",
@@ -896,6 +982,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s31",
+        imageUrl: "/img/s31.jpg",
         side: "Sith",
         name: "Pong Krell",
         era: "Prequel",
@@ -907,6 +994,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s32",
+        imageUrl: "/img/s32.jpg",
         side: "Sith",
         name: "Baylan Skoll",
         era: "Sequel",
@@ -918,6 +1006,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s33",
+        imageUrl: "/img/s33.jpg",
         side: "Sith",
         name: "Shin Hati",
         era: "Sequel",
@@ -929,6 +1018,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s34",
+        imageUrl: "/img/s34.jpg",
         side: "Sith",
         name: "Darth Momin",
         era: "Old Republic",
@@ -940,6 +1030,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s35",
+        imageUrl: "/img/s35.jpg",
         side: "Sith",
         name: "Darth Ruin",
         era: "Old Republic",
@@ -951,6 +1042,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s36",
+        imageUrl: "/img/s36.jpg",
         side: "Sith",
         name: "Darth Andeddu",
         era: "Old Republic",
@@ -962,6 +1054,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s37",
+        imageUrl: "/img/s37.jpg",
         side: "Sith",
         name: "Lumiya",
         era: "Original",
@@ -973,6 +1066,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s38",
+        imageUrl: "/img/s38.jpg",
         side: "Sith",
         name: "Jacen Solo",
         era: "Sequel",
@@ -984,6 +1078,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s39",
+        imageUrl: "/img/s39.jpg",
         side: "Sith",
         name: "Barriss Offee",
         era: "Prequel",
@@ -995,6 +1090,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s40",
+        imageUrl: "/img/s40.jpg",
         side: "Sith",
         name: "Bode Akuna",
         era: "Original",
@@ -1006,6 +1102,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s41",
+        imageUrl: "/img/s41.jpg",
         side: "Sith",
         name: "Reva Sevander",
         era: "Original",
@@ -1017,6 +1114,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s42",
+        imageUrl: "/img/s42.jpg",
         side: "Sith",
         name: "Fourth Sister",
         era: "Original",
@@ -1028,6 +1126,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s43",
+        imageUrl: "/img/s43.jpg",
         side: "Sith",
         name: "Sixth Brother",
         era: "Original",
@@ -1039,6 +1138,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s44",
+        imageUrl: "/img/s44.jpg",
         side: "Sith",
         name: "Taron Malicos",
         era: "Original",
@@ -1050,6 +1150,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s45",
+        imageUrl: "/img/s45.jpg",
         side: "Sith",
         name: "Dagan Gera",
         era: "High Republic",
@@ -1061,6 +1162,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s46",
+        imageUrl: "/img/s46.jpg",
         side: "Sith",
         name: "Darth Marr",
         era: "Old Republic",
@@ -1072,6 +1174,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s47",
+        imageUrl: "/img/s47.jpg",
         side: "Sith",
         name: "Darth Baras",
         era: "Old Republic",
@@ -1083,6 +1186,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s48",
+        imageUrl: "/img/s48.jpg",
         side: "Sith",
         name: "Darth Jadus",
         era: "Old Republic",
@@ -1094,6 +1198,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s49",
+        imageUrl: "/img/s49.jpg",
         side: "Sith",
         name: "Darth Zash",
         era: "Old Republic",
@@ -1105,6 +1210,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s50",
+        imageUrl: "/img/s50.jpg",
         side: "Sith",
         name: "Darth Thanaton",
         era: "Old Republic",
@@ -1116,6 +1222,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s51",
+        imageUrl: "/img/s51.jpg",
         side: "Sith",
         name: "Marka Ragnos",
         era: "Old Republic",
@@ -1127,6 +1234,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s52",
+        imageUrl: "/img/s52.jpg",
         side: "Sith",
         name: "Naga Sadow",
         era: "Old Republic",
@@ -1138,6 +1246,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s53",
+        imageUrl: "/img/s53.jpg",
         side: "Sith",
         name: "Ludo Kressh",
         era: "Old Republic",
@@ -1149,6 +1258,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s54",
+        imageUrl: "/img/s54.jpg",
         side: "Sith",
         name: "Freedon Nadd",
         era: "Old Republic",
@@ -1160,6 +1270,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s55",
+        imageUrl: "/img/s55.jpg",
         side: "Sith",
         name: "Darth Desolous",
         era: "Old Republic",
@@ -1171,6 +1282,7 @@ export const forceUsers: ForceEntity[] = [
     },
     {
         id: "s56",
+        imageUrl: "/img/s56.jpg",
         side: "Sith",
         name: "Darth Phobos",
         era: "Old Republic",

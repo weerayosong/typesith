@@ -1,109 +1,164 @@
 import type { ForceEntity } from "../types";
 
 interface EntityModalProps {
-    entity: ForceEntity | null; // ถ้ารับ null มา แปลว่าให้ปิด Modal
+    entity: ForceEntity | null;
     onClose: () => void;
 }
 
 export default function EntityModal({ entity, onClose }: EntityModalProps) {
-    // ถ้าไม่มีตัวละครถูกเลือกอยู่ ก็ไม่ต้อง render อะไรเลย
     if (!entity) return null;
 
     const isSith = entity.side === "Sith";
     const displayName = isSith ? entity.darthTitle : entity.name;
 
+    const defaultJediImage =
+        "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?q=80&w=800&auto=format&fit=crop";
+    const defaultSithImage =
+        "https://images.unsplash.com/photo-1505567745926-ba89000d255a?q=80&w=800&auto=format&fit=crop";
+    const imageToDisplay = entity.imageUrl
+        ? entity.imageUrl
+        : isSith
+          ? defaultSithImage
+          : defaultJediImage;
+
+    const theme = isSith
+        ? {
+              glow: "shadow-[0_0_40px_-10px_rgba(220,38,38,0.5)]",
+              accentBg: "bg-red-600",
+              textPrimary: "text-red-500",
+              panelBg: "bg-red-950/20",
+              panelBorder: "border-red-900/50",
+              badge: "bg-red-950 text-red-400 border-red-800",
+          }
+        : {
+              glow: "shadow-[0_0_40px_-10px_rgba(14,165,233,0.5)]",
+              accentBg: "bg-sky-500",
+              textPrimary: "text-sky-400",
+              panelBg: "bg-sky-950/20",
+              panelBorder: "border-sky-900/50",
+              badge: "bg-sky-950 text-sky-400 border-sky-800",
+          };
+
     return (
-        // backdropดำโปร่งใส.6
         <div
-            className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200"
-            onClick={onClose} // คลิก anywhere เพื่อปิด
+            className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-3 md:p-8 animate-in fade-in duration-200"
+            onClick={onClose}
         >
-            {/* modalกลาง */}
+            {/* main modal */}
             <div
-                className="bg-white rounded-lg shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200"
-                onClick={(e) => e.stopPropagation()} // คลิกในกล่อง modal ไม่ปิด
+                className={`flex flex-col md:flex-row bg-slate-950 w-full max-w-5xl md:h-138 max-h-[90vh] md:max-h-none rounded-2xl overflow-y-auto md:overflow-hidden relative ${theme.glow} border border-slate-800 transition-all`}
+                onClick={(e) => e.stopPropagation()}
             >
-                {/* modal header สีตามฝั่ง */}
-                <div
-                    className={`p-6 text-white ${isSith ? "bg-red-700" : "bg-slate-700"} relative`}
+                <button
+                    onClick={onClose}
+                    className="absolute top-3 right-3 md:top-4 md:right-4 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-slate-900/80 text-slate-400 hover:text-white hover:bg-slate-800 border border-slate-700 hover:scale-105 transition-all z-50"
                 >
-                    <button
-                        onClick={onClose}
-                        className="absolute top-4 right-4 text-white/70 hover:text-white transition"
-                    >
-                        ✕
-                    </button>
-                    <span className="text-xs font-bold uppercase tracking-widest opacity-80">
-                        {entity.era}
-                    </span>
-                    <h2 className="text-3xl font-extrabold mt-1">
-                        {displayName}
-                    </h2>
-                    <p className="opacity-90 mt-1">
-                        {isSith ? entity.sithRole : entity.jediRole}
-                    </p>
+                    ✕
+                </button>
+
+                {/* === left-img === */}
+                <div className="w-full md:w-5/12 h-[40vh] min-h-62 md:h-full md:min-h-0 relative bg-slate-900 shrink-0">
+                    <img
+                        src={imageToDisplay}
+                        alt={displayName}
+                        className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+                    />
+                    <div
+                        className={`absolute bottom-0 left-0 right-0 h-1.5 md:h-full md:w-2 md:top-0 md:right-0 md:bottom-0 md:left-auto ${theme.accentBg}`}
+                    ></div>
                 </div>
 
-                {/* modal content */}
-                <div className="p-6 space-y-4 text-slate-700">
-                    <div>
-                        <h4 className="text-xs font-bold text-slate-400 uppercase border-b pb-1 mb-2">
-                            Combat Profile
-                        </h4>
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <span className="block text-slate-500 text-xs">
-                                    Primary Name
-                                </span>
-                                <span className="font-semibold">
-                                    {entity.name}
-                                </span>
-                            </div>
-                            <div>
-                                <span className="block text-slate-500 text-xs">
-                                    Lightsaber Form
-                                </span>
-                                <span className="font-semibold">
-                                    {entity.combatStyle}
-                                </span>
-                            </div>
+                {/* right-info */}
+                <div className="w-full md:w-7/12 p-4 md:p-10 flex flex-col justify-center relative">
+                    <div className="mb-4 md:mb-8 mt-2 md:mt-0">
+                        <div className="flex items-center gap-2 md:gap-3 mb-2">
+                            <span
+                                className={`text-[9px] md:text-[10px] font-bold px-2 py-0.5 md:px-2.5 md:py-1 rounded uppercase border ${theme.badge}`}
+                            >
+                                {entity.side}
+                            </span>
+                            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-500">
+                                {entity.era}
+                            </span>
                         </div>
+
+                        <h2 className="text-2xl md:text-5xl font-black text-white tracking-tight leading-none mb-1 md:mb-2 drop-shadow-md">
+                            {displayName}
+                        </h2>
+                        <p
+                            className={`text-sm md:text-lg font-medium ${theme.textPrimary}`}
+                        >
+                            {isSith ? entity.sithRole : entity.jediRole}
+                        </p>
                     </div>
 
-                    <div>
-                        <h4 className="text-xs font-bold text-slate-400 uppercase border-b pb-1 mb-2">
-                            Force Connection
-                        </h4>
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <span className="block text-slate-500 text-xs">
-                                    Midichlorian Count
-                                </span>
-                                <span className="font-bold text-lg">
-                                    {entity.midichlorian.toLocaleString()}
-                                </span>
-                            </div>
-                            <div>
-                                {entity.side === "Jedi" ? (
-                                    <>
-                                        <span className="block text-slate-500 text-xs">
-                                            Lightsaber Color
-                                        </span>
-                                        <span className="font-semibold">
+                    <div className="grid grid-cols-2 gap-2 md:gap-4 pb-2 md:pb-0">
+                        <div
+                            className={`p-3 md:p-4 rounded-xl border ${theme.panelBorder} ${theme.panelBg} backdrop-blur-sm`}
+                        >
+                            <span className="block text-slate-500 text-[9px] md:text-[10px] font-bold uppercase mb-0.5 md:mb-1">
+                                True Name
+                            </span>
+                            <span className="font-semibold text-slate-200 text-sm md:text-lg line-clamp-1">
+                                {entity.name}
+                            </span>
+                        </div>
+
+                        <div
+                            className={`p-3 md:p-4 rounded-xl border ${theme.panelBorder} ${theme.panelBg} backdrop-blur-sm`}
+                        >
+                            <span className="block text-slate-500 text-[9px] md:text-[10px] font-bold uppercase mb-0.5 md:mb-1">
+                                Combat Form
+                            </span>
+                            <span className="font-semibold text-slate-200 text-sm md:text-lg line-clamp-1">
+                                {entity.combatStyle}
+                            </span>
+                        </div>
+
+                        <div
+                            className={`p-3 md:p-4 rounded-xl border ${theme.panelBorder} ${theme.panelBg} backdrop-blur-sm`}
+                        >
+                            <span className="block text-slate-500 text-[9px] md:text-[10px] font-bold uppercase mb-0.5 md:mb-1">
+                                M-Count
+                            </span>
+                            <span className="font-black text-lg md:text-2xl text-white">
+                                {entity.midichlorian.toLocaleString()}
+                            </span>
+                        </div>
+
+                        <div
+                            className={`p-3 md:p-4 rounded-xl border ${theme.panelBorder} ${theme.panelBg} backdrop-blur-sm`}
+                        >
+                            {entity.side === "Jedi" ? (
+                                <>
+                                    <span className="block text-slate-500 text-[9px] md:text-[10px] font-bold uppercase mb-0.5 md:mb-1">
+                                        Kyber Crystal
+                                    </span>
+                                    <div className="flex items-center gap-1.5 md:gap-2 md:mt-1">
+                                        <span
+                                            className="w-3 h-3 md:w-4 md:h-4 shrink-0 rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)] border border-white/20"
+                                            style={{
+                                                backgroundColor:
+                                                    entity.lightsaberColor.toLowerCase(),
+                                            }}
+                                        ></span>
+                                        <span className="font-semibold text-slate-200 text-sm md:text-lg">
                                             {entity.lightsaberColor}
                                         </span>
-                                    </>
-                                ) : (
-                                    <>
-                                        <span className="block text-slate-500 text-xs">
-                                            Corruption Level
-                                        </span>
-                                        <span className="font-semibold text-red-600">
-                                            {entity.corruptionLevel}%
-                                        </span>
-                                    </>
-                                )}
-                            </div>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <span className="block text-slate-500 text-[9px] md:text-[10px] font-bold uppercase mb-0.5 md:mb-1">
+                                        Dark Side
+                                    </span>
+                                    <span
+                                        className={`font-black text-lg md:text-2xl ${theme.textPrimary}`}
+                                    >
+                                        {entity.corruptionLevel}%
+                                    </span>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>
