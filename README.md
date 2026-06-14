@@ -1,13 +1,33 @@
-# [WIP] TypeSith: Ultimate Galactic Codex
+# TypeSith | Ultimate Galactic Records
 
 ## https://typesith.vercel.app
 
-My TypeScript Training ground.
+> **Project Disclaimer:** This project was developed primarily as a hands-on learning exercise to practice and solidify my understanding of TypeScript within a React environment. As a developer continuously building my skills in software engineering, this repository serves as a personal training ground for applying static typing, component architecture, and responsive design.
 
-![screenshot1](./public/ss1.png)
+> **Copyright Disclaimer:** Star Wars, its characters, and all related properties are trademarks and/or copyrights of Lucasfilm Ltd. and The Walt Disney Company. This application is strictly **fan-made** and created solely for **educational purposes**. No copyright infringement is intended.
+
+## Project Overview
+
+TypeSith is a frontend web application designed to catalog and display information about various Force users from the Star Wars universe. It allows users to seamlessly explore characters from both the Jedi Order and the Sith through an interactive, clean, and highly responsive interface.
+
+![screenshot1](https://github.com/weerayosong/weerayosong.github.io/blob/main/images/gif/proj7.gif?raw=true)
 
 ## Architecture & System Design Documentation
 
 [Documentation](https://dainty-custard-bd9ec7.netlify.app/)
 
-Developed as a focused, (maybe)frontend-only Training-project to practice with TypeScript fundamentals and complex UI state management. 'TypeSith' is a highly interactive, minimalist database (maybe use Mock data, this weekend I'm lack of free time) application cataloging 112 Force-sensitive entities. Embracing a top-down learning approach, I engineered this project to handle heavy data manipulation entirely on the client side without relying on a backend. The core technical challenges I overcame included implementing Discriminated Union Types for varied data structures, executing complex multi-condition array filtering and sorting, and building a dynamic pagination system from scratch. This project significantly strengthened my ability to write strictly typed, predictable code while delivering a seamless, responsive user experience.
+## Features
+
+- **Strict Type Safety:** Built entirely with TypeScript to ensure reliable data structures (`Interfaces`, `Types`) and predictable component props.
+- **Dynamic Filtering & Sorting:** Users can seamlessly filter entities by affiliation (Jedi/Sith), era, and sort them by Midichlorian count or alphabetical order.
+- **Logic Separation (Custom Hooks):** Utilizes `useMemo` and a custom hook (`useForceCodex`) to efficiently manage state, separate business logic from the UI, and improve rendering performance.
+- **Interactive UI/UX:** Features a responsive grid layout, dynamic pagination, and detailed split-layout character modals with conditional styling based on the character's dark/light side affiliation.
+- **Responsive Design:** Fully optimized for seamless mobile, tablet, and desktop experiences using Tailwind CSS.
+
+## Technologies Used
+
+- **Core:** React 19
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
