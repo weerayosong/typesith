@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { forceUsers } from "./data/mockData";
-import { filterEntities, sortEntities, paginate } from "./utils/dataProcessor";
-import type { EraType, ForceSide, SortOption, ForceEntity } from "./types";
+import { useForceCodex } from "./hooks/useForceCodex";
 
 // components
 import EntityCard from "./components/EntityCard";
@@ -10,31 +8,28 @@ import Pagination from "./components/Pagination";
 import EntityModal from "./components/EntityModal";
 
 function App() {
-    // state
-    const [searchTerm, setSearchTerm] = useState<string>("");
-    const [sideFilter, setSideFilter] = useState<"All" | ForceSide>("All");
-    const [eraFilter, setEraFilter] = useState<EraType>("All");
-    const [sortBy, setSortBy] = useState<SortOption>("mCountDesc");
-    const [currentPage, setCurrentPage] = useState<number>(1);
-    const [selectedEntity, setSelectedEntity] = useState<ForceEntity | null>(
-        null,
-    );
-
-    // derived state (คำนวณสด)
-    const filteredData = filterEntities(
-        forceUsers,
+    // custom hook เอามาใช้
+    const {
         searchTerm,
+        setSearchTerm,
         sideFilter,
+        setSideFilter,
         eraFilter,
-    );
-    const sortedData = sortEntities(filteredData, sortBy);
-    const finalData = paginate(sortedData, currentPage, 8);
-    // คำนวณจำนวนหน้าทั้งหมด
-    const totalPages = Math.ceil(filteredData.length / 8) || 1;
+        setEraFilter,
+        sortBy,
+        setSortBy,
+        currentPage,
+        setCurrentPage,
+        selectedEntity,
+        setSelectedEntity,
+        finalData,
+        totalPages,
+        totalFound,
+    } = useForceCodex(forceUsers);
 
     return (
-        <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-sans text-slate-800">
-            <div className="max-w-6xl mx-auto space-y-6">
+        <div className="min-h-screen bg-slate-50 p-4 font-sans text-slate-800">
+            <div className="max-w-6xl mx-auto space-y-2">
                 {/* === HEADER === */}
                 <header className="border-b-2 border-slate-200 pb-4 flex justify-between items-end">
                     <div>
@@ -48,7 +43,7 @@ function App() {
                         </p>
                     </div>
                     <div className="text-sm font-bold text-slate-400">
-                        Found: {filteredData.length} Entities
+                        Found: {totalFound} Entities
                     </div>
                 </header>
 

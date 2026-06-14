@@ -85,7 +85,7 @@ export default function EntityCard({ entity, onClick }: EntityCardProps) {
                         </span>
                     </div>
                     <div className="flex justify-between items-center">
-                        <span className="text-slate-400">M-Count</span>
+                        <span className="text-slate-400">Midichlorian</span>
                         <span className="font-semibold text-white">
                             {entity.midichlorian.toLocaleString()}
                         </span>

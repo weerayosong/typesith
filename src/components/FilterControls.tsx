@@ -41,7 +41,7 @@ export default function FilterControls({
 
     return (
         // เติม items-end เพื่อให้ปุ่ม Reset จัดเรียงตรงบรรทัดเดียวกับช่อง Input ด้านล่างพอดี
-        <div className="bg-white p-4 rounded-md border border-slate-200 shadow-sm flex flex-wrap items-end gap-4">
+        <div className="bg-white p-2 rounded-md border border-slate-200 shadow-sm flex flex-wrap items-end gap-3">
             {/* 🔍 Search Input */}
             <div className="flex-1 min-w-50">
                 <label className="block text-xs font-bold text-slate-400 uppercase mb-1">
@@ -129,8 +129,8 @@ export default function FilterControls({
                         onFilterChange();
                     }}
                 >
-                    <option value="mCountDesc">M-Count (High-Low)</option>
-                    <option value="mCountAsc">M-Count (Low-High)</option>
+                    <option value="mCountDesc">Midichlorian (High-Low)</option>
+                    <option value="mCountAsc">Midichlorian (Low-High)</option>
                     <option value="nameAsc">Name (A-Z)</option>
                 </select>
             </div>

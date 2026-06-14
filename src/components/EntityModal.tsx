@@ -119,7 +119,7 @@ export default function EntityModal({ entity, onClose }: EntityModalProps) {
                             className={`p-3 md:p-4 rounded-xl border ${theme.panelBorder} ${theme.panelBg} backdrop-blur-sm`}
                         >
                             <span className="block text-slate-500 text-[9px] md:text-[10px] font-bold uppercase mb-0.5 md:mb-1">
-                                M-Count
+                                Midichlorian
                             </span>
                             <span className="font-black text-lg md:text-2xl text-white">
                                 {entity.midichlorian.toLocaleString()}
